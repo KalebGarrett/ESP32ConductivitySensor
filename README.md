@@ -27,6 +27,63 @@ To measure:
 
 ---
 
+# 🔬 CQRobot TDS Sensor
+
+![TDS Sensor](Documentation/Images/cqrobot-tds.jpg)
+
+This project uses a **CQRobot analog TDS (Total Dissolved Solids) sensor**, which measures water conductivity and outputs an analog voltage.
+
+### 🧠 How it works
+
+- The probe measures **electrical conductivity** of the water  
+- Higher salt concentration → higher conductivity → higher voltage  
+- ESP32 reads this voltage and converts it into **ppm**
+
+---
+
+### ⚠️ Important Notes
+
+- This sensor **does NOT directly measure salt**
+- It measures **all dissolved solids (TDS)**
+- In saltwater hot tubs:
+  - Most dissolved solids = salt  
+  - So **TDS ≈ salinity after calibration**
+
+---
+
+### ❗ Why calibration is required
+
+Out of the box, the sensor:
+
+- Uses a generic formula (often inaccurate)
+- Varies between probes and setups
+
+👉 This project fixes that by:
+
+- Matching readings to a **real test strip**
+- Applying a custom **scale factor**
+
+---
+
+### 🔧 Output Behavior
+
+- Analog voltage range: ~0–3.3V  
+- Sensitive to:
+  - temperature  
+  - probe placement  
+  - water movement  
+
+---
+
+### 💡 Best Practices
+
+- Keep probe submerged at all times  
+- Avoid air bubbles (jets can cause noise)  
+- Do not touch probe while measuring  
+- Rinse probe with clean water occasionally  
+
+---
+
 # 🔌 Wiring
 
 | Probe Wire | ESP32 Pin |
