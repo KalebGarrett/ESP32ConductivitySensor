@@ -147,7 +147,7 @@ sensor:
 
 ## 🧪 Physical Setup
 
-![Setup](Documentation/Images/setup.jpg)
+<img src="Documentation/Images/setup.jpg" width="400"/>
 
 ### Notes
 
@@ -159,7 +159,7 @@ sensor:
 
 ## 🧂 Test Strip Calibration
 
-![Test Strip](Documentation/Images/test_strip.png)
+<img src="Documentation/Images/test_strip.png" width="300"/>
 
 Calibration is done by matching the sensor reading to the test strip result.
 
