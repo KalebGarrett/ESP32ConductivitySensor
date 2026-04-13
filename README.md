@@ -84,60 +84,6 @@ Out of the box, the sensor:
 
 ---
 
-# 🔌 Wiring
-
-| Probe Wire | ESP32 Pin |
-|-----------|----------|
-| Red       | 3.3V     |
-| Black     | GND      |
-| Green     | GPIO34   |
-
----
-
-# 📸 Photos & Setup
-
----
-
-## 🔌 ESP32 WROOM Pin Layout
-
-![ESP32 Pinout](Documentation/Images/esp32_pinout.png)
-
-### Pins Used
-
-- GPIO34 → Analog input (TDS signal)
-- 3.3V → Sensor power
-- GND → Ground
-
-⚠️ GPIO34 is input-only and cannot be used as an output.
-
----
-
-## 🧪 Physical Setup
-
-![Setup](Documentation/Images/setup.jpg)
-
-### Notes
-
-- Keep the probe submerged in circulating water  
-- Avoid placing directly in front of jets (bubbles cause noise)  
-- Ensure solid wiring connections  
-
----
-
-## 📊 Home Assistant Dashboard
-
-![Dashboard](Documentation/Images/dashboard.png)
-
----
-
-## 🧂 Test Strip Calibration
-
-![Test Strip](Documentation/Images/test_strip.png)
-
-Calibration is done by matching the sensor reading to the test strip result.
-
----
-
 # ⚙️ ESPHome Configuration
 
 ```yaml
@@ -167,3 +113,60 @@ sensor:
       float tds = voltage * scale;
 
       return tds;
+```
+
+---
+
+# 🔧 Hardware
+
+## 🖥️ ESP32 WROOM Pin Layout
+
+![ESP32 Pinout](Documentation/Images/esp32_pinout.png)
+
+### Pins Used
+
+- GPIO34 → Analog input (TDS signal)
+- 3.3V → Sensor power
+- GND → Ground
+
+⚠️ GPIO34 is input-only and cannot be used as an output.
+
+---
+
+## 🔌 Wiring
+
+| Probe Wire | ESP32 Pin |
+|-----------|----------|
+| Red       | 3.3V     |
+| Black     | GND      |
+| Green     | GPIO34   |
+
+---
+
+# 📸 Setup
+
+## 🧪 Physical Setup
+
+![Setup](Documentation/Images/setup.jpg)
+
+### Notes
+
+- Keep the probe submerged in circulating water  
+- Avoid placing directly in front of jets (bubbles cause noise)  
+- Ensure solid wiring connections  
+
+---
+
+## 🧂 Test Strip Calibration
+
+![Test Strip](Documentation/Images/test_strip.png)
+
+Calibration is done by matching the sensor reading to the test strip result.
+
+---
+
+## 📊 Home Assistant Dashboard
+
+![Dashboard](Documentation/Images/dashboard.png)
+
+---
