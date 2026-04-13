@@ -168,5 +168,3 @@ Calibration is done by matching the sensor reading to the test strip result.
 ## 📊 Home Assistant Dashboard
 
 ![Dashboard](Documentation/Images/dashboard.png)
-
----
